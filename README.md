@@ -2,7 +2,7 @@
 Este repositorio contiene las prácticas del curso de Programación para Analítica Descriptiva y Predictiva.
 
 ## Práctica 1 – Manejo de Archivos
-Analiza el archivo `mbox.txt` y extrae las mediciones que contienen la cadena `X-DSPAM-Confidence`, calculando:
+En esta practica, el codigo analiza el archivo `mbox.txt` y extrae las mediciones que contienen la cadena `X-DSPAM-Confidence`, calculando:
 - Cantidad de datos extraídos
 - Sumatoria de los datos
 - Promedio de los datos

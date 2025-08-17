@@ -88,3 +88,20 @@ Como se obtuvieron los resultados:
 Para reproducir los resultados:
 1. Abrir Practica4_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
+
+## Practica 5
+En esta practica se utilizan mascaras booleanas en NumPy:
+- Crear un arreglo de 15 numeros aleatorios entre 1 y 50.
+- Seleccionar los elementos mayores que 25 usando una mascara booleana.
+- Contar cuantos elementos son mayores que 25.
+
+Como se obtuvieron los resultados:
+1. Se importo NumPy y se genero un arreglo con np.random.randint().
+2. Se creo una mascara booleana con la condicion arreglo > 25.
+3. Se filtraron los elementos usando arreglo[mask].
+4. Se conto la cantidad de elementos mayores que 25 con np.sum(mask).
+5. Los resultados se mostraron con print().
+
+Para reproducir los resultados:
+1. Abrir Practica5_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.

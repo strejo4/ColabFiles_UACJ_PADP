@@ -105,3 +105,25 @@ Como se obtuvieron los resultados:
 Para reproducir los resultados:
 1. Abrir Practica5_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
+
+## Practica 6
+
+En esta practica se utiliza la libreria Pandas y NUmpY para analizar el dataset Titanic. Se desarrollan 5 ejercicios:
+
+1. Calcular la proporcion de supervivencia para cada combinacion de 'Sex' y 'Pclass', identificando la combinacion con mayor y menor tasa de supervivencia.
+2. Crear una columna 'FamilySize' sumando 'Siblings/Spouses Aboard' y 'Parents/Children Aboard'. Identificar familias grandes (FamilySize > 3), calcular el numero de pasajeros en familias grandes y la proporcion de supervivencia en este grupo.
+3. Segmentar a los pasajeros en dos grupos de edad mediante una funcion: 'Menor de Edad' (<18) y 'Mayor de Edad' (>=18).
+4. Calcular el promedio de las columnas 'Age' y 'Fare' de dos formas: manualmente con NumPy (limpiando valores NaN) y con Pandas (mean() ignora NaN por defecto). Verificar la consistencia entre ambos resultados.
+5. Crear intervalos equidistantes para 'Fare' usando np.linspace y asignar a cada pasajero el intervalo correspondiente mediante pd.cut. Calcular el numero de pasajeros en cada intervalo y la proporcion de supervivencia por intervalo.
+
+Como se obtuvieron los resultados:
+1. Se importo el dataset Titanic con Pandas y se trabajo sobre las columnas 'Survived', 'Pclass', 'Sex', 'Age', 'Fare', 'Siblings/Spouses Aboard' y 'Parents/Children Aboard'.
+2. Se aplicaron funciones de agrupamiento (groupby), filtrado con mascaras booleanas, creacion de nuevas columnas con operaciones aritmeticas y funciones definidas por el usuario.
+3. Se utilizaron funciones de NumPy como np.linspace y limpieza de NaN con np.isnan() para los calculos manuales.
+4. Se usaron metodos nativos de Pandas como mean(), value_counts(), groupby() y cut() para obtener resultados de forma directa.
+5. Los resultados se imprimieron en pantalla con print().
+
+Para reproducir los resultados:
+1. Abrir Practica6_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.
+

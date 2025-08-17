@@ -55,5 +55,21 @@ Como se obtuvieron los resultados:
 
 Para reproducir los resultados:
 1. Abrir Practica2_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+
+## Practica 3
+En esta practica se estan creando un arregloo en NumPy y se realizan operaciones basicas:
+- Arreglo de 20 numeros aleatorios entre 1 y 100.
+- Calculo de maximo, minimo y media.
+- Suma de 10 a cada elemento.
+
+Como se obtuvierons los resultados:
+1. Se importo NumPy y se genero el arreglo con np.random.randint().
+2. Calculos de maximo, minimo y media con np.max(), np.min() y np.mean().
+3. Se sumo 10 al arreglo usando operaciones vectorizadas.
+4. Mostre los resultados con print() en cada operacion. 
+
+Para reproducir los resultados:
+1. Abrir Practica3_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
+
 

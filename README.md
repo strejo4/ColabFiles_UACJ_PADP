@@ -66,10 +66,25 @@ Como se obtuvierons los resultados:
 1. Se importo NumPy y se genero el arreglo con np.random.randint().
 2. Calculos de maximo, minimo y media con np.max(), np.min() y np.mean().
 3. Se sumo 10 al arreglo usando operaciones vectorizadas.
-4. Mostre los resultados con print() en cada operacion. 
+4. Los resultados se mostraron con print() en cada operacion. 
 
 Para reproducir los resultados:
 1. Abrir Practica3_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
 
+## Practica 4
+En esta practica se trabajan operaciones con matrices en NumPy:
+- Crear dos matrices 3x3 con numeros aleatorios entre 1 y 10.
+- Sumar las dos matrices.
+- Restar la segunda matriz de la primera.
+- Multiplicar la primera matriz por 2.
+- Realizar multiplicacion matricial entre ambas.
 
+Como se obtuvieron los resultados:
+1. Se importo NumPy y genere dos matrices con np.random.randint().
+2. Se utilizaron operadores (+, -, *) y la funcion np.dot() para las operaciones.
+3. Los resultados se mostraron con print().
+
+Para reproducir los resultados:
+1. Abrir Practica4_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.

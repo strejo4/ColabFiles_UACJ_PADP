@@ -127,3 +127,25 @@ Para reproducir los resultados:
 1. Abrir Practica6_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
 
+## Practica 7 
+
+En esta practica se utiliza la libreria Matplotlib junto con el dataset Iris de seaborn para visualizar datos. Se desarrollaron 6 actividades:
+
+1. Cargar el dataset Iris con sns.load_dataset('iris'), revisar las primeras filas con .head() y obtener informacion general de las columnas.
+2. Crear un grafico de barras para comparar los promedios de petal_length y petal_width entre las tres especies de Iris.
+3. Elaborar un histograma de sepal_length para observar la distribucion de los largos de los sepalos.
+4. Realizar un grafico de dispersion (scatter plot) relacionando petal_length y petal_width, asignando un color distinto a cada especie.
+5. Constrir graficos de cajas (box plots) para mostrar la distribucion de sepal_length y sepal_width por especie, detectando diferencias y posibles outliers en los datos.
+6. Generar un grafico de lineas para visualizar la tendencia de petal_length a lo largo de las observaciones.
+
+Como se obtuvieron los resultados:
+1. Se importo el dataset Iris desde seaborn (sns.load_dataset) y se trabajo sobre las columnas sepal_length, sepal_width, petal_length, petal_width y species.
+2. Se calcularon promedios y se aplicaron tecnicas de agrupamiento con groupby para resumir datos por especie.
+3. Se generaron diferentes graficos con Matplotlib (bar, hist, scatter, boxplot, plot) para representar los datos.
+4. Se usaron parametros visuales como alpha (transparencia de datos), cmap (mapa de colores) y etiquetas (xlabel, ylabel, title) para mejorar la interpretacion de los datos.
+5. Los resultados se imprimieron en pantalla utilizando plt.show().
+
+Para reproducir los resultados:
+1. Abrir Practica7_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.
+

@@ -149,3 +149,24 @@ Para reproducir los resultados:
 1. Abrir Practica7_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
 
+##Practica 8
+
+En esta practica se utiliza la libreria Seaborn junto con el dataset tips para visualizar datos. Se desarrollaron 3 actividades:
+
+1. Cargar el dataset tips con sns.load_dataset('tips'), revisar las primeras filas con .head(), obtener informacion general de las columnas con .info() y .describe(), y verificar si existen valores nulos.
+2. Elaborar un mapa de calor (heatmap) mostrando la correlacion entre las variables numericas total_bill, tip y size. Personalizar el grafico con anotaciones y una paleta de colores.
+3. Construir un diagrama de violin para mostrar la distribucion de las propinas (tip) por dia de la semana, observando la variabilidad y forma de la distribucion.
+4. Generar un grafico de dispersion (scatter plot) para analizar la relacion entre total_bill y tip, asignando colores diferentes a cada dia de la semana.
+
+Como se obtuvieron los resultados:
+1. Se importo el dataset tips desde seaborn (sns.load_dataset).
+2. Se realizo un analisis exploratorio con metodos como head(), info() y describe() para conocer la estructura de los datos.
+3. Se calculo la correlacion entre variables numericas con corr() y se represento en un mapa de calor usando sns.heatmap con parametros como annot y cmap.
+4. Se utilizo sns.violinplot para graficar la distribucion de tip por dia, mostrando la densidad y variabilidad de los datos.
+5. Se empleo sns.scatterplot para representar la relacion entre total_bill y tip, utilizando un mapa de colores para diferenciar los dias de la semana.
+6. Los resultados se imprimieron en pantalla utilizando plt.show().
+
+Para reproducir los resultados:
+1. Abrir Practica8_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.
+

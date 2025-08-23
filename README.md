@@ -170,3 +170,16 @@ Para reproducir los resultados:
 1. Abrir Practica8_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
 
+## Practica 9 
+
+En esta practica se utiliza la libreria Plotly Express junto con el dataset gapminder para visualizar datos. 
+Se desarrollaron las siguientes actividades:
+
+1. Cargar el dataset gapminder con px.data.gapminder(), revisar las primeras filas con .head(), obtener informacion general de las columnas y verificar su estructura.
+2. Filtrar el dataset para el año 2007, de modo que solo se incluyan los registros correspondientes a ese año.
+3. Construir un grafico de dispersion (scatter plot) donde el eje X representa el PIB per capita (gdpPercap) y el eje Y la esperanza de vida (lifeExp).
+4. Personalizar el grafico asignando el tamano de los puntos segun la poblacion (pop) y el color segun el continente.
+
+Para reproducir los resultados:
+1. Abrir Practica9_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.

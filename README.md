@@ -207,3 +207,31 @@ Como se obtuvieron los resultados:
 Para reproducir los resultados:
 1. Abrir Practica10_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
+
+## Practica 11
+
+En esta practica se utiliza Plotly para graficar series de tiempo de precios de acciones usando el dataset stocks incluido en plotly.express.
+Se desarrollaron las siguientes actividades:
+
+1. Cargar el dataset stocks con px.data.stocks() y revisar las primeras filas con .head().
+2. Crear un grafico de lineas donde el eje X es la fecha (date) y el eje Y el precio de cierre de cada empresa.
+3. Agregar una traza (linea) por empresa usando plotly.graph_objects (go.Scatter) dentro de un ciclo for.
+4. Diferenciar cada compania con colores: Plotly asigna colores automaticamente a cada traza.
+5. Personalizar titulos y etiquetas de ejes.
+
+Como se obtuvieron los resultados:
+1. Se importaron las librerias necesarias: plotly.express como px y plotly.graph_objects como go.
+2. Se cargo el dataset con df = px.data.stocks().
+3. Se creo una figura vacia con fig = go.Figure().
+4. Se recorrio la lista de empresas con for company in df.columns[1:]: 
+   Se agrego cada linea con fig.add_trace(go.Scatter(x=df['date'], y=df[company], mode='lines', name=company)).
+5. Se ajusto el layout de la grafica con:
+   fig.update_layout(title="Evolucion del precio de acciones", xaxis_title="Fecha", yaxis_title="Precio de cierre").
+6. Se visualizo el resultado con fig.show().
+
+Para reproducir los resultados:
+1. Abrir Practica11_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.
+
+
+

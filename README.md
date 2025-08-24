@@ -177,9 +177,33 @@ Se desarrollaron las siguientes actividades:
 
 1. Cargar el dataset gapminder con px.data.gapminder(), revisar las primeras filas con .head(), obtener informacion general de las columnas y verificar su estructura.
 2. Filtrar el dataset para el año 2007, de modo que solo se incluyan los registros correspondientes a ese año.
-3. Construir un grafico de dispersion (scatter plot) donde el eje X representa el PIB per capita (gdpPercap) y el eje Y la esperanza de vida (lifeExp).
+3. Construir un grafico de dispersion (scatter plot) donde el eje X representa el gdpPercap y el eje Y la esperanza de vida (lifeExp).
 4. Personalizar el grafico asignando el tamano de los puntos segun la poblacion (pop) y el color segun el continente.
 
 Para reproducir los resultados:
 1. Abrir Practica9_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.
+
+## Practica 10
+
+En esta practica se utiliza la libreria Plotly Express junto con el dataset tips de seaborn para visualizar datos. 
+Se desarrollaron las siguientes actividades:
+
+1. Cargar el dataset tips usando sns.load_dataset("tips"), revisar las primeras filas con .head(), y verificar su estructura.
+2. Generar un histograma de la variable tip usando plotly.express.histogram().
+3. Personalizar el numero de bins para ajustar el nivel de detalle de la distribucion.
+4. Asignar colores a las barras segun la variable dia de la semana para observar diferencias entre dias.
+5. Ajustar la separacion entre barras mediante el parametro bargap para mejorar la visualizacion.
+6. Agregar etiquetas y un titulo descriptivo a la grafica.
+
+Como se obtuvieron los resultados:
+1. Se importaron las librerias seaborn y plotly.express.
+2. Se cargo el dataset tips desde seaborn y se reviso su contenido.
+3. Se utilizo la funcion px.histogram() para graficar la distribucion de tip.
+4. Se agregaron parametros como nbins para el numero de intervalos, color="day" para diferenciar por dia, y labels para renombrar las variables.
+5. Se personalizo el layout de la grafica con fig.update_layout(bargap=0.2).
+6. Los resultados se visualizaron directamente en Google Colab mediante fig.show().
+
+Para reproducir los resultados:
+1. Abrir Practica10_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.

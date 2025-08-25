@@ -233,5 +233,27 @@ Para reproducir los resultados:
 1. Abrir Practica11_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
 
+## Practica 12
 
+En esta practica se utiliza la libreria Plotly Graph Objects junto con el dataset flights de seaborn para crear un mapa de calor.
+Se desarrollaron las siguientes actividades:
 
+1. Cargar el dataset flights usando sns.load_dataset("flights") y revisar las primeras filas con .head().
+2. Reorganizar los datos con pivot para que los años aparezcan como filas, los meses como columnas y los valores de pasajeros en las celdas:
+   datos_transformados = df.pivot(index='year', columns='month', values='passengers')
+3. Crear un mapa de calor con go.Heatmap usando los valores de la tabla pivotada:
+   - z = datos_transformados.values (valores de pasajeros)
+   - x = datos_transformados.columns (meses)
+   - y = datos_transformados.index (años)
+4. Mostrar el grafico interactivo con fig.show().
+
+Como se obtuvieron los resultados:
+1. Se importaron seaborn y plotly.graph_objects.
+2. Se cargo el dataset flights y se transformo con pivot para reoorganizarlo.
+3. Se construyo el heatmap con go.Figure(data=go.Heatmap(...)).
+4. Se agregaron titulo y etiquetas a los ejes con fig.update_layout().
+5. El resultado se visualizo de forma interactiva.
+
+Para reproducir los resultados:
+1. Abrir Practica12_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.

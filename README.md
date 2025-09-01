@@ -257,3 +257,47 @@ Como se obtuvieron los resultados:
 Para reproducir los resultados:
 1. Abrir Practica12_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
+
+## Practicas 13 
+
+En estas practicas se utilizo la libreria pandas para realizar operaciones de carga, limpieza, normalizacion y verificacion de tipos de datos sobre el dataset miaad-nyc-r-s.csv.
+
+Se desarrollaron las siguientes actividades:
+
+Carga de Datos
+1. Se cargo el archivo CSV omitiendo la ultima linea irrelevante ("Esta es una linea que no deberias cargar").
+2. Se utilizo df.tail(3) para comprobar que no se cargo la linea basura.
+3. Se imprimieron las dimensiones del dataframe con df.shape.
+
+ Agregar una Columna
+1. Se imprimieron los nombres originales de las columnas.
+2. Se verifico que la primera columna tuviera el nombre INDEX MIIAD.
+3. Como aparecia como Unnamed: 0, se renombro correctamente a INDEX MIIAD.
+4. Se volvio a imprimir la lista de columnas para confirmar el cambio.
+
+ Normalizacion de Columnas
+1. Se normalizaron los nombres de las columnas para que estuvieran en minusculas y los espacios se reemplazaran con guion bajo "_".
+2. Ejemplo: "SALE PRICE" -> "sale_price".
+3. Se imprimieron los nombres de las columnas despues de la normalizacion.
+
+Errores en los Tipos de Datos
+1. Se imprimieron los tipos de datos de todas las columnas.
+2. Se detecto que las columnas sale_price, land_square_feet y gross_square_feet estaban en tipo object.
+3. Se convirtieron explicitamente a tipo float64 usando:
+   pd.to_numeric(df['columna'], errors='coerce').astype('float64')
+4. Se imprimieron nuevamente los tipos de datos para demostrar la correccion.
+
+Diccionario de Datos
+1. Se genero un diccionario de datos utilizando df.dtypes.to_dict().
+2. Se imprimio mostrando cada columna con su tipo de dato.
+
+Como se obtuvieron los resultados:
+1. Se utilizo la libreria pandas.
+2. Se cargo el dataset con pd.read_csv() usando el parametro skipfooter=1 para eliminar la linea basura al final. 
+3. Se aplicaron metodos como df.rename(), df.columns.str.lower(), pd.to_numeric(), y df.astype().
+4. Se genero un diccionario de datos con df.dtypes.to_dict().
+
+Para reproducir los resultados:
+1. Abrir el archivo Practica13_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Ejecutar las celdas en orden.
+

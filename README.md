@@ -301,3 +301,31 @@ Para reproducir los resultados:
 1. Abrir el archivo Practica13_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden.
 
+## Practicas 14
+
+En esta practica se utiliza la libreria pandas junto con el dataset nls97.csv para realizar operaciones de limpieza y transformacion de datos categoricos.
+Se desarrollaron las siguientes actividades:
+
+1. Imprimir los valores unicos de la columna maritalstatus con .unique() y su frecuencia con .value_counts().
+2. Reemplazar el valor Never-married por Single utilizando .replace() y verificar los cambios con .value_counts().
+3. Imprimir los valores unicos de la columna highestdegree con .unique() y su frecuencia con .value_counts().
+4. Quitar el numero inicial en cada categoria de highestdegree usando .str.replace() y convertir los valores a minusculas con .str.lower().
+   Ejemplo: "2. High School" -> "high school".
+5. Agrupar las categorias Widowed y Single en una nueva categoria llamada Single/No Partner usando .replace().
+   - Se creo una nueva columna maritalstatus_grouped.
+   - Se imprimieron los valores unicos con .unique() y las frecuencias con .value_counts().
+6. Imprimir el tipo de dato de la columna gender con .dtype y la memoria ocupada con .memory_usage(deep=True).
+7. Convertir la columna gender de object a category con .astype('category') y volver a imprimir el tipo de dato y la memoria ocupada.
+
+Como se obtuvieron los resultados:
+1. Se importo la libreria pandas.
+2. Se cargo el dataset nls97.csv en un DataFrame con pd.read_csv().
+3. Se utilizaron metodos de pandas para limpieza de valores y estandarizacion de categorias (.unique, .value_counts, .replace, .str.replace, .str.lower).
+4. Se agruparon categorias de baja frecuencia en una nueva categoria general.
+5. Se transformaron tipos de datos object a category con .astype para optimizar el uso de memoria.
+
+Para reproducir los resultados:
+1. Abrir Practica14_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Subir el archivo nls97.csv a la ruta correspondiente en Google Drive.
+3. Ejecutar las celdas en orden.
+

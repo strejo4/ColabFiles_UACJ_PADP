@@ -335,36 +335,37 @@ En esta practica se utiliza la libreria pandas junto con el dataset Airdata.csv 
 Se desarrollaron las siguientes actividades:
 
 1. Verificar que las columnas tengan el tipo de datos correcto usando dtypes.
-   - Se convirtio la columna DateTime a tipo datetime64.
-   - Se imprimieron las primeras 3 filas del dataset.
+   - Se convirtio la columna DateTime a tipo datetime64 con pd.to_datetime().
+   - Se imprimieron los tipos de datos despues de la conversion y las primeras 3 lineas del dataset.
 
 2. Extraer componentes de la columna DateTime.
    - Se crearon nuevas columnas Year, Month, Day y Hour.
-   - Se imprimieron las primeras 3 filas para verificar las nuevas columnas.
+   - Se imprimieron las primeras filas del dataframe para verificar los cambios.
 
 3. Realizar operaciones aritmeticas con fechas usando timedelta.
-   - Se definio un intervalo de 10 dias, 7 horas y 15 minutos.
-   - Se sumo el intervalo a la columna DateTime y se guardo en una nueva columna DateTime_Sum.
-   - Se imprimieron las columnas DateTime y DateTime_Sum.
+   - Se definio un intervalo de 10 dias, 7 horas y 15 minutos con datetime.timedelta.
+   - Se sumo el intervalo a la columna DateTime y se guardo en una nueva columna DateTime_Suma.
+   - Se imprimieron las columnas DateTime y DateTime_Suma.
 
 4. Convertir la columna DateTime a formato Unix timestamp.
-   - Se creo una nueva columna DateTime_Timestamp.
-   - Se imprimieron las columnas DateTime y DateTime_Timestamp.
+   - Se recorrio la columna DateTime con un ciclo for y se aplico .timestamp() a cada valor.
+   - Se guardaron los resultados en una lista y despues en una nueva columna DateTime_Unix.
+   - Se imprimieron las columnas DateTime y DateTime_Unix, mostrando las primeras 3 lineas.
 
 5. Filtrar datos a partir de la columna DateTime.
    - Se seleccionaron las filas con fechas mayores a 2020-11-01.
-   - Se imprimieron las primeras 3 filas filtradas.
+   - Se imprimio el resultado.
 
 Como se obtuvieron los resultados:
-1. Se importo la libreria pandas y timedelta de datetime.
+1. Se importo la libreria pandas y datetime.
 2. Se cargo el dataset Airdata.csv en un DataFrame con pd.read_csv().
-3. Se convirtieron las columnas de tipo object a datetime usando pd.to_datetime().
+3. Se convirtio la columna DateTime de tipo object a datetime con pd.to_datetime().
 4. Se extrajeron componentes de fecha y hora con .dt.year, .dt.month, .dt.day, .dt.hour.
-5. Se realizaron operaciones de aritmetica de fechas con timedelta.
-6. Se transformo la columna datetime a timestamp Unix con .timestamp().
-7. Se aplicaron filtros sobre la columna DateTime usando operadores logicos.
+5. Se realizaron operaciones de aritmetica de fechas con datetime.timedelta.
+6. Se transformo la columna DateTime a formato Unix timestamp con .timestamp() usando un ciclo for.
+7. Se aplico un filtro sobre la columna DateTime para seleccionar fechas mayores a 2020-11-01.
 
- Para reproducir los resultados:
+Para reproducir los resultados:
 1. Abrir Practica15_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Subir el archivo Airdata.csv a la ruta correspondiente en Google Drive.
 3. Ejecutar las celdas en orden.

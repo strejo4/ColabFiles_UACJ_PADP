@@ -329,3 +329,43 @@ Para reproducir los resultados:
 2. Subir el archivo nls97.csv a la ruta correspondiente en Google Drive.
 3. Ejecutar las celdas en orden.
 
+## Practica 15
+
+En esta practica se utiliza la libreria pandas junto con el dataset Airdata.csv para realizar operaciones con datos de tipo fecha y tiempo.  
+Se desarrollaron las siguientes actividades:
+
+1. Verificar que las columnas tengan el tipo de datos correcto usando dtypes.
+   - Se convirtio la columna DateTime a tipo datetime64.
+   - Se imprimieron las primeras 3 filas del dataset.
+
+2. Extraer componentes de la columna DateTime.
+   - Se crearon nuevas columnas Year, Month, Day y Hour.
+   - Se imprimieron las primeras 3 filas para verificar las nuevas columnas.
+
+3. Realizar operaciones aritmeticas con fechas usando timedelta.
+   - Se definio un intervalo de 10 dias, 7 horas y 15 minutos.
+   - Se sumo el intervalo a la columna DateTime y se guardo en una nueva columna DateTime_Sum.
+   - Se imprimieron las columnas DateTime y DateTime_Sum.
+
+4. Convertir la columna DateTime a formato Unix timestamp.
+   - Se creo una nueva columna DateTime_Timestamp.
+   - Se imprimieron las columnas DateTime y DateTime_Timestamp.
+
+5. Filtrar datos a partir de la columna DateTime.
+   - Se seleccionaron las filas con fechas mayores a 2020-11-01.
+   - Se imprimieron las primeras 3 filas filtradas.
+
+Como se obtuvieron los resultados:
+1. Se importo la libreria pandas y timedelta de datetime.
+2. Se cargo el dataset Airdata.csv en un DataFrame con pd.read_csv().
+3. Se convirtieron las columnas de tipo object a datetime usando pd.to_datetime().
+4. Se extrajeron componentes de fecha y hora con .dt.year, .dt.month, .dt.day, .dt.hour.
+5. Se realizaron operaciones de aritmetica de fechas con timedelta.
+6. Se transformo la columna datetime a timestamp Unix con .timestamp().
+7. Se aplicaron filtros sobre la columna DateTime usando operadores logicos.
+
+ Para reproducir los resultados:
+1. Abrir Practica15_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Subir el archivo Airdata.csv a la ruta correspondiente en Google Drive.
+3. Ejecutar las celdas en orden.
+

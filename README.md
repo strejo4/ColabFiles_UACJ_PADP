@@ -370,3 +370,47 @@ Para reproducir los resultados:
 2. Subir el archivo Airdata.csv a la ruta correspondiente en Google Drive.
 3. Ejecutar las celdas en orden.
 
+## Practica 16 
+
+## Practica 16
+
+En esta practica se utiliza la libreria pandas junto con el dataset dirtydata.csv para realizar operaciones de limpieza relacionadas con valores perdidos y datos duplicados.  
+
+Se desarrollaron las siguientes actividades:
+
+1. Ejercicio 01: Datos perdidos
+   - Se cargo el dataset dirtydata.csv y se verifico la carga.
+   - Se imprimio la cantidad de datos perdidos en cada columna.
+   - Se calculo la media de la columna Calories.
+   - Se aplico imputacion por promedio (mean) en la columna Calories.
+   - Se recalculo la media de la columna Calories despues de imputar.
+
+2. Ejercicio 02: Duplicidad parcial (una columna)
+   - Se identificaron registros duplicados en la columna Duration.
+   - Se utilizo value_counts() para obtener la frecuencia de valores unicos en Duration.
+   - Se eliminaron los registros duplicados en Duration.
+
+3. Ejercicio 03: Duplicidad parcial (dos columnas)
+   - Se identificaron registros duplicados en las columnas Pulse y Maxpulse.
+   - Se utilizo value_counts() para obtener la frecuencia de combinaciones unicas en Pulse y Maxpulse.
+   - Se eliminaron los duplicados parciales conservando la ultima ocurrencia (keep='last').
+
+4. Ejercicio 04: Duplicidad total o exacta
+   - Se contaron los registros duplicados exactos en todas las columnas del dataset.
+   - Se utilizo sum() para obtener la cantidad de duplicados exactos.
+   - Se eliminaron los duplicados exactos conservando la ultima ocurrencia.
+
+5. Ejercicio 05: Media con y sin duplicados
+   - Se calcularon las medias de las columnas Pulse y Maxpulse en el dataset original con duplicados.
+   - Se eliminaron los duplicados parciales en Pulse y Maxpulse conservando la ultima ocurrencia.
+   - Se recalcularon las medias de Pulse y Maxpulse en el dataset limpio para comparar.
+
+Como se obtuvieron los resultados:
+- Se utilizo la libreria pandas.
+- Se cargo el dataset dirtydata.csv en un DataFrame con pd.read_csv().
+- Se aplicaron metodos de pandas para deteccion y limpieza de datos perdidos y duplicados (.isnull(), .mean()
+
+Para reproducir los resultados:
+1. Abrir Practica16_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Subir el archivo dirtydata.csv a la ruta correspondiente en Google Drive.
+3. Ejecutar las celdas en orden.

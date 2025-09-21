@@ -372,8 +372,6 @@ Para reproducir los resultados:
 
 ## Practica 16 
 
-## Practica 16
-
 En esta practica se utiliza la libreria pandas junto con el dataset dirtydata.csv para realizar operaciones de limpieza relacionadas con valores perdidos y datos duplicados.  
 
 Se desarrollaron las siguientes actividades:

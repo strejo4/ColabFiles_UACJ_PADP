@@ -412,3 +412,43 @@ Para reproducir los resultados:
 1. Abrir Practica16_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Subir el archivo dirtydata.csv a la ruta correspondiente en Google Drive.
 3. Ejecutar las celdas en orden.
+
+## Practica 18
+
+En esta practica se utiliza la libreria pandas, matplotlib, seaborn y scipy.stats junto con el dataset AirQuality.csv para realizar un Analisis Exploratorio de Datos (EDA), incluyendo limpieza, tratamiento de datos faltantes, visualizaciones y pruebas de normalidad.  
+
+Se desarrollaron las siguientes actividades:  
+
+1. Cargar el dataset AirQuality.csv con separador ";".  
+2. Eliminar las columnas vacias (Unnamed: 15 y Unnamed: 16).  
+3. Reemplazar valores -200 por NaN en todo el DataFrame.  
+4. Convertir columnas numericas que estaban como texto (CO(GT), C6H6(GT), T, RH, AH) a tipo float64.  
+5. Imputar valores faltantes:  
+   - Numericos con la media.  
+   - Categoricos con la moda.  
+6. Obtener la descripcion estadistica del dataset (media, mediana, desviacion estandar, minimos, maximos y percentiles).  
+7. Generar histogramas para todas las variables numericas.  
+8. Crear graficas de barras para las variables categoricas (Date y Time).  
+9. Dibujar boxplots para identificar outliers en variables numericas.  
+10. Construir la matriz de correlacion y visualizarla con un heatmap.  
+11. Generar un pairplot para observar relaciones entre variables numericas.  
+12. Realizar pruebas de normalidad (Shapiro-Wilk, Anderson-Darling y Kolmogorov-Smirnov).  
+13. Generar QQplots para confirmar visualmente la normalidad de las distribuciones.  
+
+
+Como se obtuvieron los resultados:  
+1. Se importaron las librerias pandas, numpy, matplotlib, seaborn y scipy.stats.  
+2. Se cargo el dataset en un DataFrame usando pd.read_csv().  
+3. Se limpiaron los datos reemplazando valores -200 por NaN.  
+4. Se transformaron columnas de tipo object a float64.  
+5. Se imputaron valores faltantes con media y moda segun el tipo de variable.  
+6. Se realizaron analisis estadisticos descriptivos (describe(), median()).  
+7. Se generaron graficas (histogramas, barras, boxplots, heatmap, pairplot).  
+8. Se aplicaron pruebas de normalidad y se graficaron QQplots.  
+
+
+
+Para reproducir los resultados:  
+1. Abrir Practica18_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.  
+2. Subir el archivo AirQuality.csv a la ruta correspondiente en Google Drive.  
+3. Ejecutar las celdas en orden. 

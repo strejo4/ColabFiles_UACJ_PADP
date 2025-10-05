@@ -451,4 +451,74 @@ Como se obtuvieron los resultados:
 Para reproducir los resultados:  
 1. Abrir Practica18_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.  
 2. Subir el archivo AirQuality.csv a la ruta correspondiente en Google Drive.  
-3. Ejecutar las celdas en orden. 
+3. Ejecutar las celdas en orden.
+
+
+## Practica 20  
+
+En esta practica se utilizaron las librerias NumPy, Pandas, Matplotlib, Seaborn y Scipy junto con funciones de scikit-learn para aplicar distintos metodos de normalizacion y transformacion de datos.  
+
+Se desarrollaron las siguientes actividades:  
+
+---
+
+1. Ejercicio 01: Normalizacion Min-Max  
+- Se cargo el dataset wine de sklearn y se selecciono la variable alcohol.  
+- Se realizo una prueba de normalidad antes de la normalizacion.  
+- Se aplico la normalizacion Min-Max Scaling para ajustar los valores al rango [0,1].  
+- Se volvio a aplicar la prueba de normalidad.  
+- Se graficaron los datos originales y normalizados.  
+- Resultado: la escala cambio, pero la forma de la distribucion no se modifico. La normalizacion no afecto la normalidad de los datos.  
+
+---
+
+2. Ejercicio 02: Normalizacion Z-Score  
+- Se utilizo la variable malic_acid del dataset wine.  
+- Se realizo la prueba de normalidad sobre los datos originales.  
+- Se aplico la normalizacion Z-Score, centrando la media en 0 y la desviacion estandar en 1.  
+- Se compararon los resultados y las graficas.  
+- Resultado: los datos mantuvieron su forma original, pero fueron estandarizados. Esta tecnica es util para comparar variables con diferentes unidades y magnitudes.  
+
+---
+
+3. Ejercicio 03: Transformacion Logaritmica  
+- Se genero un conjunto de datos aleatorios positivos con distribucion exponencial.  
+- Se aplico la transformacion logaritmica (np.log) para reducir la asimetria.  
+- Se evaluo la normalidad antes y despues de la transformacion.  
+- Se graficaron ambas distribuciones.  
+- Resultado: la transformacion redujo la asimetria y acerco los datos a una distribucion mas normal. Los valores grandes se comprimieron, suavizando la cola derecha.  
+
+---
+
+4. Ejercicio 04: Transformacion Raiz Cuadrada  
+- Se generaron datos con distribucion exponencial.  
+- Se aplico la transformacion raiz cuadrada (np.sqrt).  
+- Se realizaron pruebas de normalidad y comparaciones graficas.  
+- Resultado: la raiz cuadrada redujo el sesgo y estabilizo la varianza, disminuyendo el impacto de los valores extremos sin alterar excesivamente la forma de la distribucion.  
+
+---
+
+5. Ejercicio 05: Transformacion Box-Cox  
+- Se generaron datos con distribucion exponencial.  
+- Se aplico la transformacion Box-Cox (scipy.stats.boxcox) y se obtuvo el valor optimo de lambda (λ).  
+- Se compararon las distribuciones antes y despues de la transformacion.  
+- Resultado: Box-Cox redujo el sesgo y acerco los datos a una forma mas normal. El valor de lambda indico el tipo de ajuste aplicado:  
+  - lambda ≈ 1 -> transformacion lineal  
+  - lambda ≈ 0 -> logaritmica  
+  - lambda ≈ 0.5 -> raiz cuadrada  
+  El metodo selecciono automaticamente el lambda optimo para mejorar la simetria y homogeneidad de los datos.  
+
+---
+
+Como se obtuvieron los resultados:  
+- Se aplicaron metodos de escalado y transformacion usando funciones de sklearn.preprocessing y scipy.stats.  
+- Se evaluo la normalidad con Shapiro-Wilk (stats.shapiro).  
+- Se usaron graficos de dispersion e histogramas con Seaborn y Matplotlib para comparar las distribuciones antes y despues de cada proceso.  
+
+---
+
+Para reproducir los resultados:  
+1. Abrir el archivo Practica20_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.  
+2. Ejecutar cada bloque de codigo secuencialmente.  
+3. Observar las salidas graficas y los resultados de las pruebas estadisticas.  
+

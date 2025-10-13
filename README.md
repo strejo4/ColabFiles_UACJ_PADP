@@ -522,3 +522,40 @@ Para reproducir los resultados:
 2. Ejecutar cada bloque de codigo secuencialmente.  
 3. Observar las salidas graficas y los resultados de las pruebas estadisticas.  
 
+
+## Practica 21
+
+En esta practica se utiliza la libreria Scikit-Learn junto con el dataset restaurantes.csv para realizar un modelo de regresion lineal simple, analizando la relacion entre la poblacion de una ciudad y las ganancias promedio de un restaurante.
+
+Se desarrollaron las siguientes actividades:
+
+1. Se importaron las bibliotecas necesarias (pandas, numpy, matplotlib, seaborn, scipy y sklearn).
+2. Se cargo el archivo restaurantes.csv y se realizo una descripcion estadistica del conjunto de datos.
+3. Se analizaron los posibles valores atipicos mediante boxplots.
+4. Se realizo un analisis exploratorio grafico (diagrama de dispersion) para observar la relacion entre poblacion y ganancia.
+5. Se calculo el coeficiente de correlacion de Pearson para determinar la fuerza y direccion de la relacion entre las variables.
+6. Se construyo un modelo de regresion lineal simple utilizando Scikit-Learn.
+7. Se obtuvieron e interpretaron el intercepto y la pendiente del modelo.
+8. Se grafico la linea de regresion sobre los datos reales para visualizar el ajuste del modelo.
+9. Se calcularon e interpretaron los residuos para verificar los supuestos del modelo (normalidad y homocedasticidad).
+10. Se elaboro el grafico Q-Q Plot para evaluar la normalidad de los residuos.
+11. Se evaluo el desempeno del modelo utilizando las metricas MSE, RMSE y R2.
+12. Finalmente, se redactaron las conclusiones sobre la utilidad, limitaciones y necesidad de estandarizacion de las variables.
+
+---
+
+### Como se obtuvieron los resultados:
+- Se importaron las bibliotecas pandas, numpy, seaborn, matplotlib, scipy y sklearn.
+- Se cargo el dataset restaurantes.csv desde Google Drive.
+- Se aplicaron metodos de analisis exploratorio y visualizacion de datos (histogramas, boxplots, graficos de dispersion).
+- Se construyo el modelo de regresion lineal simple y se interpretaron los coeficientes.
+- Se verificaron los supuestos del modelo mediante el analisis de residuos y graficos Q-Q.
+- Se calcularon las metricas de desempeno (MSE, RMSE y R2).
+- Se redactaron las conclusiones con base en los resultados obtenidos.
+
+---
+
+### Para reproducir los resultados:
+1. Abrir el archivo Practica21_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Cargar el archivo restaurantes.csv en la ruta correspondiente.
+3. Ejecutar todas las celdas en orden.

@@ -559,3 +559,46 @@ Se desarrollaron las siguientes actividades:
 1. Abrir el archivo Practica21_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Cargar el archivo restaurantes.csv en la ruta correspondiente.
 3. Ejecutar todas las celdas en orden.
+
+
+## Practica 22
+
+En esta practica se utiliza la libreria Scikit-Learn junto con el dataset advertising.csv para realizar un modelo de regresion lineal multiple, analizando la relacion entre las inversiones publicitarias (TV, Radio y Newspaper) y las ventas del producto.
+
+Se desarrollaron las siguientes actividades:
+
+1. Se importaron las bibliotecas necesarias (pandas, numpy, matplotlib, seaborn, scipy y sklearn).
+2. Se cargo el archivo advertising.csv y se realizo una descripcion estadistica del conjunto de datos.
+3. Se analizaron los posibles valores atipicos mediante boxplots.
+4. Se realizaron graficos de dispersion entre las variables independientes (TV, Radio y Newspaper) y la variable dependiente (Sales) para observar su relacion lineal.
+5. Se calculo la matriz de correlacion y se visualizo mediante un mapa de calor.
+6. Se calculo el VIF (Factor de Inflacion de Varianza) para cada variable y se grafico para analizar posibles problemas de multicolinealidad.
+7. Se construyo un modelo de regresion lineal multiple considerando las tres variables (TV, Radio y Newspaper).
+8. Se interpretaron el intercepto y los coeficientes del modelo para comprender el efecto de cada variable.
+9. Se analizaron los residuos mediante histogramas y graficos Q-Q para verificar la normalidad.
+10. Se verifico la homocedasticidad graficando los residuos contra los valores predichos.
+11. Se calcularon las metricas de desempeno MSE, RMSE y R2 para evaluar la precision del modelo.
+12. Se graficaron las ventas reales contra las predichas para evaluar visualmente el nivel de ajuste.
+13. Se ajusto el modelo con statsmodels para obtener los valores p y determinar la significancia estadistica de cada variable.
+14. Se construyo un modelo sin la variable con mayor multicolinealidad (sin Radio) y se evaluo nuevamente el ajuste.
+15. Se construyo un modelo sin la variable sin relacion lineal (sin Newspaper) y se evaluaron los resultados.
+16. Finalmente, se compararon los tres modelos y se concluyo cual fue el mejor y cuales variables influyen mas en las ventas.
+
+---
+
+### Como se obtuvieron los resultados:
+- Se importaron las librerias pandas, numpy, seaborn, matplotlib, scipy y sklearn.
+- Se cargo el dataset advertising.csv desde Google Drive.
+- Se aplicaron metodos de analisis exploratorio y visualizacion de datos (boxplots, mapas de calor, graficos de dispersion).
+- Se construyeron modelos de regresion multiple y se interpretaron los coeficientes.
+- Se verificaron los supuestos del modelo mediante el analisis de residuos, homocedasticidad y graficos Q-Q.
+- Se calcularon las metricas de desempeno (MSE, RMSE y R2).
+- Se compararon los modelos completos, sin multicolinealidad y sin variables no lineales.
+- Se redactaron las conclusiones finales sobre el mejor modelo y las variables con mayor influencia.
+
+---
+
+### Para reproducir los resultados:
+1. Abrir el archivo Practica22_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Cargar el archivo advertising.csv en la ruta correspondiente.
+3. Ejecutar todas las celdas en orden.

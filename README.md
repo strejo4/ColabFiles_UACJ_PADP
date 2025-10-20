@@ -584,7 +584,6 @@ Se desarrollaron las siguientes actividades:
 15. Se construyo un modelo sin la variable sin relacion lineal (sin Newspaper) y se evaluaron los resultados.
 16. Finalmente, se compararon los tres modelos y se concluyo cual fue el mejor y cuales variables influyen mas en las ventas.
 
----
 
 ### Como se obtuvieron los resultados:
 - Se importaron las librerias pandas, numpy, seaborn, matplotlib, scipy y sklearn.
@@ -596,9 +595,48 @@ Se desarrollaron las siguientes actividades:
 - Se compararon los modelos completos, sin multicolinealidad y sin variables no lineales.
 - Se redactaron las conclusiones finales sobre el mejor modelo y las variables con mayor influencia.
 
----
 
 ### Para reproducir los resultados:
 1. Abrir el archivo Practica22_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Cargar el archivo advertising.csv en la ruta correspondiente.
 3. Ejecutar todas las celdas en orden.
+
+
+## Practica 23
+
+En esta practica se utilizo la libreria Scikit-Learn junto con el dataset **insurance.csv** para realizar modelos de **regresion lineal con regularizacion (Lasso y Ridge)**, analizando la relacion entre factores personales (edad, indice de masa corporal, numero de hijos, genero, habito de fumar y region) y los costos medicos (**charges**).
+
+Se desarrollaron las siguientes actividades:
+
+1. Se importaron las librerias necesarias (numpy, pandas, matplotlib, seaborn y sklearn).  
+2. Se cargo el archivo **insurance.csv** y se revisaron las primeras filas, tipos de datos y estadisticas descriptivas.  
+3. Se realizo un analisis exploratorio (EDA) para observar la distribucion de las variables y detectar posibles outliers.  
+4. Se calcularon medidas de tendencia central y dispersion, y se graficaron histogramas, boxplots y frecuencias de variables categoricas.  
+5. Se genero una matriz de correlacion y su mapa de calor para identificar las variables numericas mas relacionadas con **"charges"**.  
+6. Se realizo el preprocesamiento de datos, estandarizando las variables numericas y codificando las categoricas mediante **OneHotEncoder**.  
+7. Se entrenaron los modelos **Lasso (alpha=0.1)** y **Ridge (alpha=1.0)** para comparar su rendimiento.  
+8. Se evaluaron las metricas **MSE** y **R2** para medir el ajuste de cada modelo.  
+9. Se analizaron los coeficientes de cada modelo para identificar las variables mas influyentes en los costos medicos.  
+10. Se verificaron los supuestos de la regresion (linealidad, normalidad, homocedasticidad y multicolinealidad).  
+11. Finalmente, se compararon ambos modelos para determinar cual es mas interpretable, cual reduce mejor el sobreajuste y que variables tienen mayor impacto sobre los costos medicos.  
+
+
+### Como se obtuvieron los resultados:
+
+- Se importaron las librerias **pandas**, **numpy**, **seaborn**, **matplotlib** y **sklearn**.  
+- Se cargo el dataset **insurance.csv** desde Google Drive.  
+- Se realizo el analisis exploratorio para conocer la distribucion de las variables y detectar outliers.  
+- Se calcularon correlaciones, se preprocesaron los datos y se aplicaron los modelos **Lasso** y **Ridge**.  
+- Se evaluo el desempeno de ambos modelos utilizando **MSE** y **R2**.  
+- Se analizaron los residuos, la normalidad y los valores de **VIF** para descartar multicolinealidad.  
+- Se redactaron las conclusiones finales comparando el comportamiento de ambos modelos y las variables mas relevantes.  
+
+
+### Para reproducir los resultados:
+
+1. Abrir el archivo **Practica23_SergioTrejo.ipynb** en Google Colab o Jupyter Notebook.  
+2. Cargar el archivo **insurance.csv** en la ruta correspondiente.  
+3. Ejecutar todas las celdas del notebook en orden.  
+
+
+

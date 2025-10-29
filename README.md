@@ -639,4 +639,74 @@ Se desarrollaron las siguientes actividades:
 3. Ejecutar todas las celdas del notebook en orden.  
 
 
+## Practica 25.
 
+**Objetivo del ejercicio:**  
+Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, practicar la preparacion de datos para un modelo de Machine Learning y evaluar la precision del modelo usando diferentes metricas.
+
+---
+
+### Actividades desarrolladas
+
+1. **Carga de Datos:**  
+   Se cargo el dataset de vivienda desde la fuente publica  
+   `https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.csv`  
+   con las columnas: CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT y MEDV.  
+
+2. **Analisis de Datos:**  
+   Se realizo un analisis descriptivo del conjunto de datos y se graficaron histogramas, boxplots y un mapa de calor para observar las distribuciones y correlaciones.  
+   Se identificaron outliers naturales en variables como CRIM, ZN y B.  
+   Se encontro que RM tiene la correlacion positiva mas alta con MEDV y LSTAT la mas negativa.
+
+3. **Preprocesamiento:**  
+   Se verifico que no existen valores nulos ni variables categoricas.  
+   Se creo una nueva columna `MEDV_clase` para clasificar las viviendas en tres categorias:  
+   - Bajo (menor a 20)  
+   - Medio (entre 20 y 35)  
+   - Alto (mayor a 35)  
+   Se observo un ligero desbalance en las clases, con mayor concentracion en la categoria media.
+
+4. **Division de Conjuntos:**  
+   El dataset se dividio en 70% para entrenamiento y 30% para prueba, manteniendo la proporcion de clases con `stratify=y`.  
+   Esta division permite evaluar el modelo con datos que no fueron usados en el entrenamiento.
+
+5. **Entrenamiento:**  
+   Se entreno un modelo de Arbol de Decision usando el criterio Gini y una profundidad maxima de 3 niveles.  
+   El modelo aprendio las reglas para clasificar las viviendas en las tres categorias segun sus variables numericas.
+
+6. **Optimizacion:**  
+   Se experimento con diferentes valores de `max_depth` (1, 2, 3, 4, 5, 7, 10, None) para observar su efecto en la precision.  
+   La mejor precision (0.83) se obtuvo con `max_depth=4`, logrando un equilibrio entre simplicidad y rendimiento.  
+   Profundidades mayores no mejoraron el resultado y mostraron tendencia al sobreajuste.
+
+7. **Evaluacion:**  
+   Se evaluo el modelo usando **precision**, **recall** y **F1-score**, obteniendo una precision global del 83%.  
+   Las clases Bajo y Medio fueron las mejor clasificadas, mientras que Alto mostro menor recall debido a su menor cantidad de ejemplos.  
+   La matriz de confusion confirmo que la mayoria de las predicciones fueron correctas, sin evidencia de sobreajuste.
+
+---
+
+### Como se obtuvieron los resultados
+
+- Se importaron las librerias `pandas`, `numpy`, `matplotlib`, `seaborn` y `sklearn`.  
+- Se realizo el analisis exploratorio, creacion de la variable categorica y graficas de correlacion.  
+- Se dividio el dataset en conjuntos de entrenamiento y prueba.  
+- Se entreno el modelo de arbol de decision y se probo su precision con diferentes profundidades.  
+- Se evaluaron las metricas de rendimiento y la matriz de confusion.
+
+---
+
+### Para reproducir los resultados
+
+1. Abrir el archivo `practica25_sergiotrejo.py` o el notebook equivalente en Google Colab o Jupyter Notebook.  
+2. Ejecutar todas las celdas en orden.  
+3. Verificar las salidas graficas y metricas generadas en la evaluacion final.
+
+---
+
+### Conclusiones
+
+El modelo de Arbol de Decision clasifico correctamente la mayoria de las viviendas con una precision del 83%.  
+La profundidad optima del arbol fue 4, donde se logro el mejor equilibrio entre generalizacion y rendimiento.  
+Las variables con mayor influencia en el valor medio de la vivienda fueron **RM** (numero de habitaciones) y **LSTAT** (nivel socioeconomico).  
+El modelo presento un buen desempeño general sin señales de sobreajuste.

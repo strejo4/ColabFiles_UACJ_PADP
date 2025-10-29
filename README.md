@@ -644,7 +644,6 @@ Se desarrollaron las siguientes actividades:
 **Objetivo del ejercicio:**  
 Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, practicar la preparacion de datos para un modelo de Machine Learning y evaluar la precision del modelo usando diferentes metricas.
 
----
 
 ### Actividades desarrolladas
 
@@ -684,7 +683,6 @@ Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, p
    Las clases Bajo y Medio fueron las mejor clasificadas, mientras que Alto mostro menor recall debido a su menor cantidad de ejemplos.  
    La matriz de confusion confirmo que la mayoria de las predicciones fueron correctas, sin evidencia de sobreajuste.
 
----
 
 ### Como se obtuvieron los resultados
 
@@ -694,7 +692,6 @@ Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, p
 - Se entreno el modelo de arbol de decision y se probo su precision con diferentes profundidades.  
 - Se evaluaron las metricas de rendimiento y la matriz de confusion.
 
----
 
 ### Para reproducir los resultados
 

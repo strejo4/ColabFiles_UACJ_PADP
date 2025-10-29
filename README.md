@@ -699,11 +699,3 @@ Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, p
 2. Ejecutar todas las celdas en orden.  
 3. Verificar las salidas graficas y metricas generadas en la evaluacion final.
 
----
-
-### Conclusiones
-
-El modelo de Arbol de Decision clasifico correctamente la mayoria de las viviendas con una precision del 83%.  
-La profundidad optima del arbol fue 4, donde se logro el mejor equilibrio entre generalizacion y rendimiento.  
-Las variables con mayor influencia en el valor medio de la vivienda fueron **RM** (numero de habitaciones) y **LSTAT** (nivel socioeconomico).  
-El modelo presento un buen desempeño general sin señales de sobreajuste.

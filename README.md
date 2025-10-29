@@ -47,7 +47,7 @@ Como se obtuvieron los resultados:
 2 Recorri cada linea del archivo con un bucle for.
 3. Use expresiones regulares re.findall() para:
    - Encontrar "accion de" y extraer nombre y ticker.
-   - Encontrar "Fecha:" y guardar la fecha.
+   - Encontrar "Fecha:" y guardar la fecha. 
    - Encontrar "Valor actual:" y guardar el valor como float.
 4. Se guardo la informacion en un diccionario, usando el nombre y ticker como clave, y listas para almacenar las fechas y valores.
 5. Se calcularon para cada empresa la fecha mas reciente, el valor maximo, el valor minimo y el promedio.

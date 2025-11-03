@@ -447,7 +447,6 @@ Como se obtuvieron los resultados:
 8. Se aplicaron pruebas de normalidad y se graficaron QQplots.  
 
 
-
 Para reproducir los resultados:  
 1. Abrir Practica18_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.  
 2. Subir el archivo AirQuality.csv a la ruta correspondiente en Google Drive.  
@@ -460,7 +459,6 @@ En esta practica se utilizaron las librerias NumPy, Pandas, Matplotlib, Seaborn 
 
 Se desarrollaron las siguientes actividades:  
 
----
 
 1. Ejercicio 01: Normalizacion Min-Max  
 - Se cargo el dataset wine de sklearn y se selecciono la variable alcohol.  
@@ -470,7 +468,6 @@ Se desarrollaron las siguientes actividades:
 - Se graficaron los datos originales y normalizados.  
 - Resultado: la escala cambio, pero la forma de la distribucion no se modifico. La normalizacion no afecto la normalidad de los datos.  
 
----
 
 2. Ejercicio 02: Normalizacion Z-Score  
 - Se utilizo la variable malic_acid del dataset wine.  
@@ -479,7 +476,7 @@ Se desarrollaron las siguientes actividades:
 - Se compararon los resultados y las graficas.  
 - Resultado: los datos mantuvieron su forma original, pero fueron estandarizados. Esta tecnica es util para comparar variables con diferentes unidades y magnitudes.  
 
----
+
 
 3. Ejercicio 03: Transformacion Logaritmica  
 - Se genero un conjunto de datos aleatorios positivos con distribucion exponencial.  
@@ -488,7 +485,6 @@ Se desarrollaron las siguientes actividades:
 - Se graficaron ambas distribuciones.  
 - Resultado: la transformacion redujo la asimetria y acerco los datos a una distribucion mas normal. Los valores grandes se comprimieron, suavizando la cola derecha.  
 
----
 
 4. Ejercicio 04: Transformacion Raiz Cuadrada  
 - Se generaron datos con distribucion exponencial.  
@@ -496,7 +492,7 @@ Se desarrollaron las siguientes actividades:
 - Se realizaron pruebas de normalidad y comparaciones graficas.  
 - Resultado: la raiz cuadrada redujo el sesgo y estabilizo la varianza, disminuyendo el impacto de los valores extremos sin alterar excesivamente la forma de la distribucion.  
 
----
+
 
 5. Ejercicio 05: Transformacion Box-Cox  
 - Se generaron datos con distribucion exponencial.  
@@ -508,14 +504,13 @@ Se desarrollaron las siguientes actividades:
   - lambda ≈ 0.5 -> raiz cuadrada  
   El metodo selecciono automaticamente el lambda optimo para mejorar la simetria y homogeneidad de los datos.  
 
----
+
 
 Como se obtuvieron los resultados:  
 - Se aplicaron metodos de escalado y transformacion usando funciones de sklearn.preprocessing y scipy.stats.  
 - Se evaluo la normalidad con Shapiro-Wilk (stats.shapiro).  
 - Se usaron graficos de dispersion e histogramas con Seaborn y Matplotlib para comparar las distribuciones antes y despues de cada proceso.  
 
----
 
 Para reproducir los resultados:  
 1. Abrir el archivo Practica20_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.  
@@ -542,7 +537,7 @@ Se desarrollaron las siguientes actividades:
 11. Se evaluo el desempeno del modelo utilizando las metricas MSE, RMSE y R2.
 12. Finalmente, se redactaron las conclusiones sobre la utilidad, limitaciones y necesidad de estandarizacion de las variables.
 
----
+
 
 ### Como se obtuvieron los resultados:
 - Se importaron las bibliotecas pandas, numpy, seaborn, matplotlib, scipy y sklearn.
@@ -553,7 +548,7 @@ Se desarrollaron las siguientes actividades:
 - Se calcularon las metricas de desempeno (MSE, RMSE y R2).
 - Se redactaron las conclusiones con base en los resultados obtenidos.
 
----
+
 
 ### Para reproducir los resultados:
 1. Abrir el archivo Practica21_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
@@ -699,3 +694,37 @@ Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, p
 2. Ejecutar todas las celdas en orden.  
 3. Verificar las salidas graficas y metricas generadas en la evaluacion final.
 
+
+## Practica 26
+
+En esta practica se trabajo con el dataset Glioma Grading Clinical and Mutation Features para aplicar modelos de clasificacion utilizando Arboles de Decision, analizando la optimizacion de hiperparametros y comparando el rendimiento con distintas metricas (F1 Macro y Accuracy).
+
+Se desarrollaron las siguientes actividades:
+
+1. Se importaron las librerias necesarias (pandas, numpy, matplotlib, seaborn y sklearn).
+2. Se cargo el dataset TCGA_InfoWithGrade.csv desde el repositorio UCI Machine Learning Repository.
+3. Se realizo un analisis exploratorio de los datos (EDA) revisando la forma del dataset, las primeras filas, tipos de datos y estadisticas descriptivas.
+4. Se mostro la distribucion de la variable objetivo Grade y se graficaron histogramas de las variables numericas y boxplots por clase.
+5. Se visualizo la matriz de correlacion entre variables mediante un mapa de calor para observar posibles relaciones.
+6. Se entreno un Arbol de Decision variando la profundidad (max_depth) y se evaluaron los resultados mediante validacion cruzada estratificada (StratifiedKFold) con la metrica F1 Macro.
+7. Se graficaron los puntajes F1 Macro en entrenamiento y prueba para distintas profundidades, analizando el comportamiento del modelo frente al underfitting y overfitting.
+8. Se aplico RandomizedSearchCV para optimizar los hiperparametros del modelo utilizando la metrica F1 Macro, definiendo un espacio de busqueda aleatorio con cinco combinaciones.
+9. Se aplico GridSearchCV para realizar una busqueda exhaustiva de hiperparametros con la misma metrica, comparando los resultados obtenidos frente a la busqueda aleatoria.
+10. Se repitieron ambos procesos de optimizacion (RandomizedSearchCV y GridSearchCV) utilizando ahora la metrica Accuracy para evaluar el rendimiento del modelo desde otra perspectiva.
+11. Finalmente, se realizo una reflexion analizando los resultados, comparando las metricas, los hiperparametros y el costo computacional entre los distintos metodos de optimizacion.
+
+### Como se obtuvieron los resultados:
+
+1. Se importaron las librerias pandas, numpy, matplotlib, seaborn y sklearn.
+2. Se cargo el dataset Glioma Grading Clinical and Mutation Features y se limpio para su analisis.
+3. Se realizo un analisis exploratorio para revisar estructura, distribucion de clases y correlaciones entre variables.
+4. Se entrenaron modelos de Arbol de Decision con diferentes profundidades y se evaluaron usando validacion cruzada con 10 particiones.
+5. Se optimizaron los hiperparametros con RandomizedSearchCV y GridSearchCV utilizando las metricas F1 Macro y Accuracy.
+6. Se compararon los resultados de ambas metricas y metodos de optimizacion para identificar las configuraciones mas estables y precisas.
+
+### Para reproducir los resultados:
+
+1. Abrir el archivo Practica26_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Descargar el dataset desde el sitio oficial UCI Machine Learning Repository.
+3. Cargar el archivo TCGA_InfoWithGrade.csv en la misma ruta del notebook.
+4. Ejecutar todas las celdas en orden para generar graficos, metricas y conclusiones.

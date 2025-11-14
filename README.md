@@ -699,7 +699,7 @@ Comprender el uso del algoritmo de Decision Tree para tareas de clasificacion, p
 
 En esta practica se trabajo con el dataset Glioma Grading Clinical and Mutation Features para aplicar modelos de clasificacion utilizando Arboles de Decision, analizando la optimizacion de hiperparametros y comparando el rendimiento con distintas metricas (F1 Macro y Accuracy).
 
-Se desarrollaron las siguientes actividades:
+## Se desarrollaron las siguientes actividades:
 
 1. Se importaron las librerias necesarias (pandas, numpy, matplotlib, seaborn y sklearn).
 2. Se cargo el dataset TCGA_InfoWithGrade.csv desde el repositorio UCI Machine Learning Repository.
@@ -713,7 +713,7 @@ Se desarrollaron las siguientes actividades:
 10. Se repitieron ambos procesos de optimizacion (RandomizedSearchCV y GridSearchCV) utilizando ahora la metrica Accuracy para evaluar el rendimiento del modelo desde otra perspectiva.
 11. Finalmente, se realizo una reflexion analizando los resultados, comparando las metricas, los hiperparametros y el costo computacional entre los distintos metodos de optimizacion.
 
-### Como se obtuvieron los resultados:
+## Como se obtuvieron los resultados:
 
 1. Se importaron las librerias pandas, numpy, matplotlib, seaborn y sklearn.
 2. Se cargo el dataset Glioma Grading Clinical and Mutation Features y se limpio para su analisis.
@@ -722,9 +722,47 @@ Se desarrollaron las siguientes actividades:
 5. Se optimizaron los hiperparametros con RandomizedSearchCV y GridSearchCV utilizando las metricas F1 Macro y Accuracy.
 6. Se compararon los resultados de ambas metricas y metodos de optimizacion para identificar las configuraciones mas estables y precisas.
 
-### Para reproducir los resultados:
+## Para reproducir los resultados:
 
 1. Abrir el archivo Practica26_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
 2. Descargar el dataset desde el sitio oficial UCI Machine Learning Repository.
 3. Cargar el archivo TCGA_InfoWithGrade.csv en la misma ruta del notebook.
 4. Ejecutar todas las celdas en orden para generar graficos, metricas y conclusiones.
+
+
+## Pracitca 27
+
+# Practica 27 – Support Vector Machines (SVM)
+
+En esta practica se trabajo con el dataset Breast Cancer de Scikit-Learn para aplicar modelos de clasificacion utilizando Maquinas de Vectores de Soporte (SVM), analizando el impacto del desbalance en las clases y evaluando mejoras usando SMOTE dentro de validacion cruzada.
+
+## Se desarrollaron las siguientes actividades:
+
+1. Se importaron las librerias necesarias (pandas, numpy, matplotlib, seaborn, sklearn e imblearn).
+2. Se cargo el dataset Breast Cancer desde Scikit-Learn y se realizo la exploracion inicial revisando los features, la distribucion de clases y el contenido general del dataset.
+3. Se convirtio la informacion a un DataFrame y se visualizo la distribucion de la variable objetivo mediante una grafica de barras.
+4. Se aplico un modelo SVM con kernel RBF utilizando un pipeline con estandarizacion y validacion cruzada estratificada (StratifiedKFold) con 5 particiones.
+5. Se evaluaron las metricas por clase (precision, recall y F1-score) usando la funcion classification_report.
+6. Se analizo el impacto del desbalance identificando que la clase minoritaria (malignant) presenta un recall ligeramente menor.
+7. Se genero la matriz de confusion promedio usando cross_val_predict para observar el desempeno general del modelo.
+8. Se aplico SMOTE dentro de cada fold del proceso de validacion para balancear la clase minoritaria sin alterar la distribucion completa.
+9. Se entreno nuevamente la SVM con SMOTE y se compararon las metricas antes y despues del balanceo.
+10. Se grafico la comparacion del F1-score por clase antes y despues utilizando un grafico de barras.
+11. Se comentaron las ventajas y riesgos de SMOTE, asi como escenarios donde conviene usar tecnicas alternativas como One-Sided Selection (OSS) o ADASYN.
+
+## Como se obtuvieron los resultados:
+
+1. Se importaron las librerias y se cargo el dataset Breast Cancer.
+2. Se preparo el DataFrame y se reviso la distribucion de las clases.
+3. Se construyo un pipeline con StandardScaler y SVC, y se aplico validacion cruzada estratificada con 5 folds.
+4. Se generaron predicciones con cross_val_predict y se obtuvieron las metricas de clasificacion y la matriz de confusion promedio.
+5. Se implemento un segundo pipeline con SMOTE dentro de cada fold y se volvio a evaluar el modelo.
+6. Se compararon las metricas de desempeno antes y despues del balanceo.
+7. Se graficaron los valores F1 por clase para visualizar los cambios.
+8. Se redactaron conclusiones sobre el desbalance y las tecnicas de remuestreo.
+
+## Para reproducir los resultados:
+
+1. Abrir y ejecutar el archivo Practica27_SergioTrejo.ipynb en Google Colab o Jupyter Notebook.
+2. Asegurarse de tener instaladas las librerias necesarias: numpy, pandas, matplotlib, seaborn, sklearn e imblearn.
+3. Ejecutar las celdas en orden para generar graficas, metricas y conclusiones.
